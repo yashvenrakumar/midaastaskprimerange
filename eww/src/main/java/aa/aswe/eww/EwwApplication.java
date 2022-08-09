@@ -60,22 +60,19 @@ public class EwwApplication {
 				}
 			}
 			EndDateandTime += "  Ending Millisecond =  " + startTime + " And Difference of Millis = "
-					+ (System.currentTimeMillis()-startTime ) ;
+					+ (System.currentTimeMillis() - startTime);
 			listofuser.add(new user(a, b, list.size(), list, StartDateAndTime, EndDateandTime));
 
 		}
 
 		sc.close();
 	}
-     
+
 	@RequestMapping(value = "/user", method = RequestMethod.GET)
 	public ArrayList<user> hello() {
- 
 
 		return listofuser;
 
 	}
-
- 
 
 }
